@@ -25,6 +25,38 @@
 })();
 
 
+
+// Insertion sort with recursion
+// Same perfomance as iterative insertion sorting
+
+function insertionSortWithRecursion(arr, n) {
+    if (n <= 1) {
+        return;
+    }
+
+    insertionSortWithRecursion(arr, n-1);
+
+    let last = arr[n-1];
+    let j = n-2;
+
+    while(j >= 0 && arr[j] > last) {
+        arr[j+1] = arr[j];
+        j--;
+    }
+
+    arr[j+1] = last;
+}
+
+(function mainMethodForRecursion() {
+    
+    const inputArr = [12,11,13,5,6,3];
+    insertionSortWithRecursion(inputArr, inputArr.length);
+
+    // console.log(inputArr);
+})();
+
+
+
 // Binary insertion sort
 // We can use binary search to reduce the numer of comparison in normal
 // insertion sort.
