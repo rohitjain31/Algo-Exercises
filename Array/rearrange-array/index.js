@@ -8,6 +8,8 @@
 // Input Arr -- [-1, 2, -3, 4, 5, 6, -7, 8, 9]
 // Output Arr -- [9, -7, 8, -3, 5, -1, 2, 4, 6]
 
+// Time Complexity: O(n) where n is number of elements in given array.
+// Auxiliary Space: O(1)
 
 function swap(arr, i, j) {
     var temp = arr[i];
@@ -41,5 +43,5 @@ function rearrange(arr, size) {
 
     rearrange(inputArr, inputArr.length);
 
-    console.log(inputArr);
+    // console.log(inputArr);
 })();
